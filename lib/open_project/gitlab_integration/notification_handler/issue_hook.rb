@@ -48,11 +48,12 @@ module OpenProject::GitlabIntegration
       attr_reader :payload
 
       def generate_notes(payload)
-        accepted_actions = %w[open reopen close]
+        accepted_actions = %w[open reopen update close]
 
         key_action = {
           'open' => 'opened',
           'reopen' => 'reopened',
+          'update' => 'opened',
           'close' => 'closed'
         }[payload.object_attributes.action]
 
