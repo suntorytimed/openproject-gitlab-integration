@@ -53,7 +53,6 @@ module OpenProject::GitlabIntegration
         key_action = {
           'open' => 'opened',
           'reopen' => 'reopened',
-          'update' => 'opened',
           'close' => 'closed'
         }[payload.object_attributes.action]
 
